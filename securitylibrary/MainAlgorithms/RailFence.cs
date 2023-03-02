@@ -11,18 +11,25 @@ namespace SecurityLibrary
     {
         public int Analyse(string plainText, string cipherText)
         {
-            throw new NotImplementedException();
+            int Key = 0;
+
+
+
+
+            return Key;
         }
 
         public string Decrypt(string cipherText, int key)
         {
+            // Declarations
             int Len = (int)Math.Ceiling((double)cipherText.Length / key);
             char[,] Char_Arr = new char[key, Len];
             string Result = "";
             int Row = 0;
             int Col = 0;
 
-            for(int i = 0; i < cipherText.Length; i++)
+            // Fill the matrix row wise based
+            for (int i = 0; i < cipherText.Length; i++)
             {
                 if (Col == Len)
                 {
@@ -32,8 +39,12 @@ namespace SecurityLibrary
                 Char_Arr[Row, Col] = cipherText[i];
                 Col++;
             }
+
+            // reset values to reuse variables
             Row = 0;
             Col = 0;
+
+            // Generate the plain text column wise 
             for (int i = 0; i < cipherText.Length; i++)
             {
                 if (Row == key)
@@ -49,12 +60,14 @@ namespace SecurityLibrary
 
         public string Encrypt(string plainText, int key)
         {
+            // Declarations
             int Len = (int)Math.Ceiling((double)plainText.Length / key);
             char[,] Char_Arr = new char[key, Len];
             string Result = "";
             int Row = 0;
             int Col = 0;
 
+            // Fill the matrix column wise based on the key
             for (int i = 0; i < plainText.Length; i++)
             {
                 if (Row == key)
@@ -65,6 +78,8 @@ namespace SecurityLibrary
                 Char_Arr[Row, Col] = plainText[i];
                 Row++;
             }
+
+            // Generate the cipher text row wise
             for (int i = 0; i < key; i++)
             {
                 for (int j = 0; j < Len; j++)
