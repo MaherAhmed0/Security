@@ -10,3 +10,9 @@ C:\Users\GIGABYTE\Downloads\startupcode\SecurityLibrary\obj\Debug\SecurityLibrar
 C:\Users\GIGABYTE\Downloads\startupcode\SecurityLibrary\obj\Debug\SecurityLibrary.csproj.CoreCompileInputs.cache
 C:\Users\GIGABYTE\Downloads\startupcode\SecurityLibrary\obj\Debug\SecurityLibrary.dll
 C:\Users\GIGABYTE\Downloads\startupcode\SecurityLibrary\obj\Debug\SecurityLibrary.pdb
+D:\College\4 - 2\Cyber Security\Security\SecurityLibrary\bin\Debug\SecurityLibrary.dll
+D:\College\4 - 2\Cyber Security\Security\SecurityLibrary\bin\Debug\SecurityLibrary.pdb
+D:\College\4 - 2\Cyber Security\Security\SecurityLibrary\obj\Debug\SecurityLibrary.csproj.AssemblyReference.cache
+D:\College\4 - 2\Cyber Security\Security\SecurityLibrary\obj\Debug\SecurityLibrary.csproj.CoreCompileInputs.cache
+D:\College\4 - 2\Cyber Security\Security\SecurityLibrary\obj\Debug\SecurityLibrary.dll
+D:\College\4 - 2\Cyber Security\Security\SecurityLibrary\obj\Debug\SecurityLibrary.pdb

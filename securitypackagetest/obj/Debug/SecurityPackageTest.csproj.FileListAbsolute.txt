@@ -16,3 +16,12 @@ C:\Users\GIGABYTE\Downloads\startupcode\SecurityPackageTest\obj\Debug\SecurityPa
 C:\Users\GIGABYTE\Downloads\startupcode\SecurityPackageTest\obj\Debug\SecurityPackageTest.csproj.CopyComplete
 C:\Users\GIGABYTE\Downloads\startupcode\SecurityPackageTest\obj\Debug\SecurityPackageTest.dll
 C:\Users\GIGABYTE\Downloads\startupcode\SecurityPackageTest\obj\Debug\SecurityPackageTest.pdb
+D:\College\4 - 2\Cyber Security\Security\SecurityPackageTest\bin\Debug\SecurityPackageTest.dll
+D:\College\4 - 2\Cyber Security\Security\SecurityPackageTest\bin\Debug\SecurityPackageTest.pdb
+D:\College\4 - 2\Cyber Security\Security\SecurityPackageTest\bin\Debug\SecurityLibrary.dll
+D:\College\4 - 2\Cyber Security\Security\SecurityPackageTest\bin\Debug\SecurityLibrary.pdb
+D:\College\4 - 2\Cyber Security\Security\SecurityPackageTest\obj\Debug\SecurityPackageTest.csproj.AssemblyReference.cache
+D:\College\4 - 2\Cyber Security\Security\SecurityPackageTest\obj\Debug\SecurityPackageTest.csproj.CoreCompileInputs.cache
+D:\College\4 - 2\Cyber Security\Security\SecurityPackageTest\obj\Debug\SecurityPackageTest.csproj.CopyComplete
+D:\College\4 - 2\Cyber Security\Security\SecurityPackageTest\obj\Debug\SecurityPackageTest.dll
+D:\College\4 - 2\Cyber Security\Security\SecurityPackageTest\obj\Debug\SecurityPackageTest.pdb
