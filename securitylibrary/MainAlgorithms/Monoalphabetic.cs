@@ -8,19 +8,74 @@ namespace SecurityLibrary
 {
     public class Monoalphabetic : ICryptographicTechnique<string, string>
     {
+        char[] alphabet = new char[] { 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z' };
+        string text = "";
         public string Analyse(string plainText, string cipherText)
         {
-            throw new NotImplementedException();
+            cipherText = cipherText.ToLower();
+            string notFound = "";
+            int notFoundIndex = 0;
+            for(int i = 0; i < alphabet.Length; i++)
+            {
+                if (!cipherText.Contains(alphabet[i]))
+                {
+                    notFound += alphabet[i];
+                }
+            }
+            for(int i = 0; i < alphabet.Length; i++)
+            {
+                bool isFound = false;
+                int index = -1;
+                for(int j = 0; j < plainText.Length; j++)
+                {
+                    if (plainText[j] == alphabet[i])
+                    {
+                        isFound = true;
+                        index = j;
+                    }
+                }
+                if (isFound)
+                {
+                    text += cipherText[index];
+                }
+                else
+                {
+                    text += notFound[notFoundIndex];
+                    notFoundIndex++;
+                }
+            }
+            return text;
         }
 
         public string Decrypt(string cipherText, string key)
         {
-            throw new NotImplementedException();
+            cipherText = cipherText.ToLower();
+            for (int i = 0; i < cipherText.Length; i++)
+            {
+                for (int j = 0; j < alphabet.Length; j++)
+                {
+                    if (cipherText[i] == key[j])
+                    {
+                        text += alphabet[j];
+                    }
+                }
+            }
+            return text;
         }
 
         public string Encrypt(string plainText, string key)
         {
-            throw new NotImplementedException();
+            for(int i = 0; i < plainText.Length; i++)
+            {
+                for (int j = 0; j < alphabet.Length; j++)
+                {
+                    if (plainText[i] == alphabet[j])
+                    {
+                        text += key[j];
+                    }
+                }
+            }
+            return text;
         }
 
         /// <summary>
@@ -56,7 +111,48 @@ namespace SecurityLibrary
         /// <returns>Plain text</returns>
         public string AnalyseUsingCharFrequency(string cipher)
         {
-            throw new NotImplementedException();
+            cipher = cipher.ToLower();
+            string frequency = "zqjxkvbywgpfmucdlhrsnioate";
+            int[] array = new int[26];
+            int count;
+            for(int i = 0; i < alphabet.Length; i++)
+            {
+                count = 0;
+                for(int j = 0; j < cipher.Length; j++)
+                {
+                    if (cipher[j] == alphabet[i])
+                    {
+                        count++;
+                    }
+                }
+                array[i] = count;
+            }
+            for(int i = 0; i < array.Length; i++)
+            {
+                for(int j = 0; j < array.Length - 1; j++)
+                {
+                    if (array[j] > array[j + 1])
+                    {
+                        int temp = array[j + 1];
+                        array[j + 1] = array[j];
+                        array[j] = temp;
+                        char t = alphabet[j + 1];
+                        alphabet[j + 1] = alphabet[j];
+                        alphabet[j] = t;
+                    }
+                }
+            }
+            string key = "";
+            for(int i = 0; i < alphabet.Length; i++)
+            {
+                key += alphabet[i];
+            }
+            for (int i = 0; i < cipher.Length; i++)
+            {
+                int index = key.IndexOf(cipher[i]);
+                text += frequency[index];
+            }
+            return text;
         }
     }
 }
