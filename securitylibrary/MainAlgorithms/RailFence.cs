@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.Specialized;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,12 +12,24 @@ namespace SecurityLibrary
     {
         public int Analyse(string plainText, string cipherText)
         {
-            int Key = 0;
+            int Key = 1;
+            string Check_String = "";
+            string Check_String_for_x = "";
+            while (true)
+            {
+                Check_String = Encrypt(plainText, Key);
 
+                Check_String_for_x = Check_String.Replace("\0", "X");
+                Check_String = Check_String.Replace("\0", string.Empty);
 
-
-
-            return Key;
+                if (Check_String.Equals(cipherText, StringComparison.InvariantCultureIgnoreCase)
+                    || Check_String_for_x.Equals(cipherText, StringComparison.InvariantCultureIgnoreCase))
+                {
+                    break;
+                }
+                Key++;
+            }
+            return Key;    
         }
 
         public string Decrypt(string cipherText, int key)
