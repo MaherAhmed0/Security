@@ -13,12 +13,13 @@ namespace SecurityLibrary.DES
     {
         public override string Decrypt(string cipherText, string key)
         {
-            throw new NotImplementedException();
+
+            return cipherText;
         }
 
         public override string Encrypt(string plainText, string key)
         {
-            throw new NotImplementedException();
+            return plainText;
         }
     }
 }
