@@ -33,6 +33,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Numerics" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -48,6 +49,7 @@
     <Compile Include="DES\DES.cs" />
     <Compile Include="DES\TripleDES.cs" />
     <Compile Include="DiffieHellman\DiffieHellman.cs" />
+    <Compile Include="MainAlgorithms\ELGAMAL.cs" />
     <Compile Include="MainAlgorithms\HillCipher.cs" />
     <Compile Include="CryptographicTechnique.cs" />
     <Compile Include="MD5\MD5.cs" />
